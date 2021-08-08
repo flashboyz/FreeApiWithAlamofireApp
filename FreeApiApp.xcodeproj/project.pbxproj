@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		F83F075D26BEE21500828C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F075C26BEE21500828C47 /* AppDelegate.swift */; };
 		F83F075F26BEE21500828C47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F075E26BEE21500828C47 /* SceneDelegate.swift */; };
-		F83F076126BEE21500828C47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F076026BEE21500828C47 /* ViewController.swift */; };
 		F83F076426BEE21500828C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83F076226BEE21500828C47 /* Main.storyboard */; };
 		F83F076626BEE21600828C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F83F076526BEE21600828C47 /* Assets.xcassets */; };
 		F83F076926BEE21600828C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83F076726BEE21600828C47 /* LaunchScreen.storyboard */; };
+		F83F077126BEE28F00828C47 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F077026BEE28F00828C47 /* NetworkManager.swift */; };
+		F83F077326BF020800828C47 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F077226BF020800828C47 /* GameModel.swift */; };
+		F83F077D26BF084900828C47 /* GamesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F077C26BF084900828C47 /* GamesCollectionViewController.swift */; };
+		F83F077F26BF46B500828C47 /* GameCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F077E26BF46B500828C47 /* GameCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F83F075926BEE21500828C47 /* FreeApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83F075C26BEE21500828C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83F075E26BEE21500828C47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F83F076026BEE21500828C47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F83F076326BEE21500828C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F83F076526BEE21600828C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F83F076826BEE21600828C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F83F076A26BEE21600828C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F83F077026BEE28F00828C47 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F83F077226BF020800828C47 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		F83F077C26BF084900828C47 /* GamesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewController.swift; sourceTree = "<group>"; };
+		F83F077E26BF46B500828C47 /* GameCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		F83F075B26BEE21500828C47 /* FreeApiApp */ = {
 			isa = PBXGroup;
 			children = (
-				F83F075C26BEE21500828C47 /* AppDelegate.swift */,
-				F83F075E26BEE21500828C47 /* SceneDelegate.swift */,
-				F83F076026BEE21500828C47 /* ViewController.swift */,
-				F83F076226BEE21500828C47 /* Main.storyboard */,
+				F83F077B26BF06E000828C47 /* Storyboards */,
+				F83F077826BF066D00828C47 /* ViewControllers */,
+				F83F077926BF068500828C47 /* Models */,
 				F83F076526BEE21600828C47 /* Assets.xcassets */,
-				F83F076726BEE21600828C47 /* LaunchScreen.storyboard */,
-				F83F076A26BEE21600828C47 /* Info.plist */,
+				F83F077A26BF069600828C47 /* SupportingFiles */,
 			);
 			path = FreeApiApp;
+			sourceTree = "<group>";
+		};
+		F83F077826BF066D00828C47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F83F077C26BF084900828C47 /* GamesCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F83F077926BF068500828C47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F83F077226BF020800828C47 /* GameModel.swift */,
+				F83F077E26BF46B500828C47 /* GameCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F83F077A26BF069600828C47 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F83F077026BEE28F00828C47 /* NetworkManager.swift */,
+				F83F075C26BEE21500828C47 /* AppDelegate.swift */,
+				F83F075E26BEE21500828C47 /* SceneDelegate.swift */,
+				F83F076A26BEE21600828C47 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F83F077B26BF06E000828C47 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F83F076226BEE21500828C47 /* Main.storyboard */,
+				F83F076726BEE21600828C47 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F83F076126BEE21500828C47 /* ViewController.swift in Sources */,
+				F83F077326BF020800828C47 /* GameModel.swift in Sources */,
+				F83F077F26BF46B500828C47 /* GameCellModel.swift in Sources */,
+				F83F077D26BF084900828C47 /* GamesCollectionViewController.swift in Sources */,
+				F83F077126BEE28F00828C47 /* NetworkManager.swift in Sources */,
 				F83F075D26BEE21500828C47 /* AppDelegate.swift in Sources */,
 				F83F075F26BEE21500828C47 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q2Z7KQQ83;
-				INFOPLIST_FILE = FreeApiApp/Info.plist;
+				INFOPLIST_FILE = FreeApiApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q2Z7KQQ83;
-				INFOPLIST_FILE = FreeApiApp/Info.plist;
+				INFOPLIST_FILE = FreeApiApp/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
