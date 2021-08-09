@@ -12,9 +12,7 @@ class GamesCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        NetworkManager.shared.fetchData(from: url) { Game in
-//            print(self.Games)
-//        fetchData()
+       fetchData()
         }
     
     
@@ -26,6 +24,7 @@ class GamesCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GameCell
         let game = games[indexPath.item]
         cell.configur(with: game)
@@ -58,6 +57,10 @@ extension GamesCollectionViewController: UICollectionViewDelegateFlowLayout {
             
             do {
                 self.games = try JSONDecoder().decode([Game].self, from: data)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                    
+                }
             } catch let error {
                 print(error)
             }

@@ -15,6 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.82745099070000006" green="0.75294119120000003" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="0.0" right="20"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="40" id="LKy-dm-teH">
                             <size key="itemSize" width="358" height="150"/>
                             <size key="estimatedItemSize" width="358" height="200"/>
@@ -23,31 +24,45 @@
                             <inset key="sectionInset" minX="0.0" minY="50" maxX="0.0" maxY="100"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="cell" id="sgz-Jz-csG" customClass="GameCell" customModule="FreeApiApp" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="cell" id="sgz-Jz-csG" customClass="GameCell" customModule="FreeApiApp" customModuleProvider="target">
                                 <rect key="frame" x="8.5" y="50" width="358" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xHe-XH-lHp">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Xd-wd-I6U">
                                     <rect key="frame" x="0.0" y="0.0" width="358" height="134"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xO-gp-IVP">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xO-gp-IVP">
                                             <rect key="frame" x="8" y="8" width="126" height="118"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="2xO-gp-IVP" secondAttribute="height" multiplier="63:59" id="1lm-Ww-FfH"/>
+                                                <constraint firstAttribute="height" constant="118" id="MHQ-HN-eO5"/>
+                                                <constraint firstAttribute="width" constant="126" id="qz3-bK-wls"/>
                                             </constraints>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sGg-69-2kR">
-                                            <rect key="frame" x="235" y="36" width="46.5" height="62"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sGg-69-2kR">
+                                            <rect key="frame" x="213" y="8" width="99" height="119"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-JN-zCg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="46.5" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wac-IM-3U8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="99" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-JN-zCg">
+                                                    <rect key="frame" x="0.0" y="34" width="33" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-3B-8eC">
-                                                    <rect key="frame" x="0.0" y="41.5" width="46.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Жанр:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMr-Q2-ACa">
+                                                    <rect key="frame" x="0.0" y="64.5" width="60.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-3B-8eC">
+                                                    <rect key="frame" x="0.0" y="98.5" width="46.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -56,15 +71,16 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="sGg-69-2kR" secondAttribute="bottom" constant="36" id="53u-N1-Ab4"/>
-                                        <constraint firstItem="2xO-gp-IVP" firstAttribute="top" secondItem="xHe-XH-lHp" secondAttribute="top" constant="8" id="H15-Ll-KUA"/>
-                                        <constraint firstItem="2xO-gp-IVP" firstAttribute="leading" secondItem="xHe-XH-lHp" secondAttribute="leading" constant="8" id="IV2-p7-E7x"/>
-                                        <constraint firstAttribute="bottom" secondItem="2xO-gp-IVP" secondAttribute="bottom" constant="8" id="n7I-sI-7PJ"/>
-                                        <constraint firstItem="sGg-69-2kR" firstAttribute="top" secondItem="xHe-XH-lHp" secondAttribute="top" constant="36" id="pMX-sR-KUd"/>
-                                        <constraint firstItem="sGg-69-2kR" firstAttribute="leading" secondItem="2xO-gp-IVP" secondAttribute="trailing" constant="101" id="tB1-7O-mOH"/>
+                                        <constraint firstAttribute="bottom" secondItem="sGg-69-2kR" secondAttribute="bottom" constant="7" id="7OB-dF-2MB"/>
+                                        <constraint firstItem="sGg-69-2kR" firstAttribute="top" secondItem="8Xd-wd-I6U" secondAttribute="top" constant="8" id="Bd2-wx-FVf"/>
+                                        <constraint firstItem="2xO-gp-IVP" firstAttribute="leading" secondItem="8Xd-wd-I6U" secondAttribute="leading" constant="8" id="Cd4-eq-UbQ"/>
+                                        <constraint firstItem="2xO-gp-IVP" firstAttribute="top" secondItem="8Xd-wd-I6U" secondAttribute="top" constant="8" id="Fol-lp-Yq0"/>
+                                        <constraint firstAttribute="bottom" secondItem="2xO-gp-IVP" secondAttribute="bottom" constant="8" id="Pzc-qR-jVT"/>
+                                        <constraint firstItem="sGg-69-2kR" firstAttribute="leading" secondItem="2xO-gp-IVP" secondAttribute="trailing" constant="79" id="nzr-c5-AeF"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <size key="customSize" width="358" height="134"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
