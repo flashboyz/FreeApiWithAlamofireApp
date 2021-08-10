@@ -12,7 +12,10 @@ class GamesCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       fetchData()
+        NetworkManager.shared.fetchData(from: url) { game in
+            self.games = game
+            self.collectionView.reloadData()
+        }
         }
     
     
@@ -41,30 +44,6 @@ class GamesCollectionViewController: UICollectionViewController {
 extension GamesCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 48, height: 150)
-    }
-    
-  
-    func fetchData() {
-        
-        guard let urlLink = URL(string: url ) else {return}
-        
-        URLSession.shared.dataTask(with: urlLink) { (data, response, error) in
-            if let  error = error {
-                print(error)
-                return
-            }
-            guard let data = data else { return }
-            
-            do {
-                self.games = try JSONDecoder().decode([Game].self, from: data)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                    
-                }
-            } catch let error {
-                print(error)
-            }
-        }.resume()
     }
 }
 

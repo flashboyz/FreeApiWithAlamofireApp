@@ -11,6 +11,4 @@ struct Game: Decodable {
     let title: String
     let genre: String
     let thumbnail: String
-    
-    
 }

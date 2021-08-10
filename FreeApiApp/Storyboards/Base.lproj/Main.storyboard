@@ -33,7 +33,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2xO-gp-IVP">
                                             <rect key="frame" x="8" y="8" width="126" height="118"/>
-                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.82745099070000006" green="0.75294119120000003" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="118" id="MHQ-HN-eO5"/>
                                                 <constraint firstAttribute="width" constant="126" id="qz3-bK-wls"/>
