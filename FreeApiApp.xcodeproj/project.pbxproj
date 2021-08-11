@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B68423165B01D12301ED11A /* Pods_FreeApiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B305FD6B3BA85278AC274BD /* Pods_FreeApiApp.framework */; };
 		F83F075D26BEE21500828C47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F075C26BEE21500828C47 /* AppDelegate.swift */; };
 		F83F075F26BEE21500828C47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83F075E26BEE21500828C47 /* SceneDelegate.swift */; };
 		F83F076426BEE21500828C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83F076226BEE21500828C47 /* Main.storyboard */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B305FD6B3BA85278AC274BD /* Pods_FreeApiApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeApiApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C7F343B900568544CC4299F /* Pods-FreeApiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeApiApp.release.xcconfig"; path = "Target Support Files/Pods-FreeApiApp/Pods-FreeApiApp.release.xcconfig"; sourceTree = "<group>"; };
+		9806E1B9FD8F0B63062306AA /* Pods-FreeApiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeApiApp.debug.xcconfig"; path = "Target Support Files/Pods-FreeApiApp/Pods-FreeApiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F83F075926BEE21500828C47 /* FreeApiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeApiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83F075C26BEE21500828C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83F075E26BEE21500828C47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B68423165B01D12301ED11A /* Pods_FreeApiApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306D882EB2A3D9C49FF93EB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9806E1B9FD8F0B63062306AA /* Pods-FreeApiApp.debug.xcconfig */,
+				8C7F343B900568544CC4299F /* Pods-FreeApiApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6BC6EEAD14C6A34A98333EB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B305FD6B3BA85278AC274BD /* Pods_FreeApiApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F83F075026BEE21400828C47 = {
 			isa = PBXGroup;
 			children = (
 				F83F075B26BEE21500828C47 /* FreeApiApp */,
 				F83F075A26BEE21500828C47 /* Products */,
+				306D882EB2A3D9C49FF93EB0 /* Pods */,
+				6BC6EEAD14C6A34A98333EB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F83F076D26BEE21600828C47 /* Build configuration list for PBXNativeTarget "FreeApiApp" */;
 			buildPhases = (
+				C11F92ACEDF20708DA36D8AF /* [CP] Check Pods Manifest.lock */,
 				F83F075526BEE21400828C47 /* Sources */,
 				F83F075626BEE21400828C47 /* Frameworks */,
 				F83F075726BEE21400828C47 /* Resources */,
+				40D03CD0D1556D9BEAC9FF91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +199,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40D03CD0D1556D9BEAC9FF91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeApiApp/Pods-FreeApiApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FreeApiApp/Pods-FreeApiApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FreeApiApp/Pods-FreeApiApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11F92ACEDF20708DA36D8AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FreeApiApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F83F075526BEE21400828C47 /* Sources */ = {
@@ -327,6 +396,7 @@
 		};
 		F83F076E26BEE21600828C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9806E1B9FD8F0B63062306AA /* Pods-FreeApiApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -346,6 +416,7 @@
 		};
 		F83F076F26BEE21600828C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7F343B900568544CC4299F /* Pods-FreeApiApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

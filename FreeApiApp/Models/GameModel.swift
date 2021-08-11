@@ -11,4 +11,10 @@ struct Game: Decodable {
     let title: String
     let genre: String
     let thumbnail: String
+    
+    init(postData: [String: Any]) {
+        title = postData["title"] as? String ?? ""
+        genre = postData["genre"] as? String ?? ""
+        thumbnail = postData["thumbnail"] as? String ?? ""
+    }
 }

@@ -7,16 +7,21 @@
 import UIKit
 
 class GamesCollectionViewController: UICollectionViewController {
-     let url = "https://www.freetogame.com/api/games"
-     private var games: [Game] = []
+    let url = "https://www.freetogame.com/api/games"
+    private var games: [Game] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.shared.fetchData(from: url) { game in
-            self.games = game
-            self.collectionView.reloadData()
+        NetworkManager.shared.fetchData(from: url) { games in
+            DispatchQueue.main.async {
+                self.games = games
+                self.collectionView.reloadData()
+            }
         }
-        }
+    }
+
+
+
     
     
     // MARK: -UICollectionViewDataSource
@@ -34,7 +39,6 @@ class GamesCollectionViewController: UICollectionViewController {
         
         return cell
     }
-
 }
     
 
